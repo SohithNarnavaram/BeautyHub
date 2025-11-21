@@ -32,7 +32,6 @@ export const VendorProfile = () => {
   const textColor = theme === 'dark' ? 'text-dark-text' : 'text-pink-text';
   const textSecondary = theme === 'dark' ? 'text-dark-textSecondary' : 'text-pink-textSecondary';
   const cardBg = theme === 'dark' ? 'bg-dark-card' : 'bg-pink-card';
-  const borderColor = theme === 'dark' ? 'border-dark-border' : 'border-pink-border';
   const accentColor = theme === 'dark' ? 'text-dark-accent' : 'text-pink-accent';
 
   useEffect(() => {

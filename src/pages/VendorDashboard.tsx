@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import { useTheme } from '../context/ThemeContext';
-import { Vendor, Booking, Service, Product } from '../types';
+import { Vendor, Booking } from '../types';
 import { api } from '../api/mockApi';
 import {
   Calendar,
@@ -10,8 +10,6 @@ import {
   Edit,
   Trash2,
   Upload,
-  Clock,
-  CheckCircle,
 } from 'lucide-react';
 
 export const VendorDashboard = () => {

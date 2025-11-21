@@ -3,7 +3,7 @@ import { useNavigate } from 'react-router-dom';
 import { useTheme } from '../context/ThemeContext';
 import { CartItem } from '../types';
 import { api } from '../api/mockApi';
-import { CreditCard, Lock, CheckCircle } from 'lucide-react';
+import { CreditCard, Lock } from 'lucide-react';
 
 export const Checkout = () => {
   const { theme } = useTheme();

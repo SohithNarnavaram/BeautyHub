@@ -21,7 +21,6 @@ export const CalendarAvailability = ({
   selectedTime,
 }: CalendarAvailabilityProps) => {
   const { theme } = useTheme();
-  const [viewDate, setViewDate] = useState(new Date());
 
   const bgColor = theme === 'dark' ? 'bg-dark-card' : 'bg-pink-card';
   const textColor = theme === 'dark' ? 'text-dark-text' : 'text-pink-text';
@@ -63,7 +62,6 @@ export const CalendarAvailability = ({
 
       <div className="grid grid-cols-7 gap-2">
         {days.map((day) => {
-          const dayName = getDayName(day);
           const available = isAvailable(day);
           const isSelected = selectedDate && isSameDay(parseISO(selectedDate), day);
           const dateStr = format(day, 'yyyy-MM-dd');

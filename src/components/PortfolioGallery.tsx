@@ -11,7 +11,6 @@ export const PortfolioGallery = ({ images, vendorName }: PortfolioGalleryProps) 
   const { theme } = useTheme();
   const [selectedIndex, setSelectedIndex] = useState<number | null>(null);
 
-  const bgColor = theme === 'dark' ? 'bg-dark-card' : 'bg-pink-card';
   const textColor = theme === 'dark' ? 'text-dark-text' : 'text-pink-text';
   const overlayBg = theme === 'dark' ? 'bg-black/90' : 'bg-white/95';
 

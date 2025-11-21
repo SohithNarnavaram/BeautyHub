@@ -120,7 +120,7 @@ export const VendorCard = ({ vendor, index = 0 }: VendorCardProps) => {
             </div>
 
             <div className="flex flex-wrap gap-2">
-              {vendor.services.slice(0, 2).map((service, i) => (
+              {vendor.services.slice(0, 2).map((service) => (
                 <span
                   key={service.id}
                   className={`text-xs ${

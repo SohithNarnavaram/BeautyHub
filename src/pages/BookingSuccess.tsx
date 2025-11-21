@@ -1,6 +1,6 @@
 import { useParams, useNavigate } from 'react-router-dom';
 import { useTheme } from '../context/ThemeContext';
-import { CheckCircle, Calendar, Home, ArrowLeft } from 'lucide-react';
+import { CheckCircle, Calendar, ArrowLeft } from 'lucide-react';
 
 export const BookingSuccess = () => {
   const { code } = useParams<{ code: string }>();

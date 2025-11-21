@@ -6,7 +6,7 @@ import { SearchBar } from '../components/SearchBar';
 import { VendorCard } from '../components/VendorCard';
 import { api } from '../api/mockApi';
 import { Vendor, Gender } from '../types';
-import { Sparkles, Star, TrendingUp, ArrowRight, Award, Users, Calendar, Zap } from 'lucide-react';
+import { Sparkles, Star, TrendingUp, ArrowRight, Award, Users, Calendar } from 'lucide-react';
 
 export const Home = () => {
   const { theme } = useTheme();

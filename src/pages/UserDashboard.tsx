@@ -1,13 +1,12 @@
 import { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { useTheme } from '../context/ThemeContext';
-import { Booking, Vendor } from '../types';
+import { Booking } from '../types';
 import { api } from '../api/mockApi';
 import {
   Calendar,
   Clock,
   MapPin,
-  Star,
   Heart,
   ShoppingBag,
   CheckCircle,

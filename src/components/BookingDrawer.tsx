@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { X, ChevronRight, MapPin, Home, Building2 } from 'lucide-react';
+import { X, ChevronRight, Home, Building2 } from 'lucide-react';
 import { useTheme } from '../context/ThemeContext';
 import { Vendor, Service, VisitType, Booking } from '../types';
 import { CalendarAvailability } from './CalendarAvailability';
