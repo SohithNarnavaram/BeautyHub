@@ -68,6 +68,7 @@ export interface Product {
   image: string;
   category: string;
   inStock: boolean;
+  gender?: Gender;
 }
 
 export interface Testimonial {
@@ -92,4 +93,7 @@ export interface SearchFilters {
   minRating?: number;
   maxPrice?: number;
 }
+
+
+
 

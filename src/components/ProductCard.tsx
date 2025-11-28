@@ -22,6 +22,20 @@ export const ProductCard = ({ product, onAddToCart, index = 0 }: ProductCardProp
     ? 'bg-dark-accent hover:bg-dark-accentHover'
     : 'bg-gradient-to-r from-pink-accent to-[#ff4da6] hover:shadow-[0_0_20px_rgba(245,0,122,0.4)]';
 
+  // Get cover image based on gender
+  const getCoverImage = () => {
+    const gender = product.gender || 'unisex';
+    switch (gender) {
+      case 'male':
+        return 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=800&q=80';
+      case 'female':
+        return 'https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=800&q=80';
+      case 'unisex':
+      default:
+        return 'https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?w=800&q=80';
+    }
+  };
+
   const handleAddToCart = async () => {
     await api.addToCart(product, 1);
     onAddToCart?.();
@@ -40,10 +54,20 @@ export const ProductCard = ({ product, onAddToCart, index = 0 }: ProductCardProp
       } transition-all duration-300 h-full flex flex-col`}
     >
       <div className="relative aspect-square overflow-hidden group">
+        {/* Background cover image */}
+        <div 
+          className="absolute inset-0 w-full h-full opacity-20 blur-2xl scale-150"
+          style={{
+            backgroundImage: `url(${getCoverImage()})`,
+            backgroundSize: 'cover',
+            backgroundPosition: 'center',
+          }}
+        />
+        {/* Product image */}
         <motion.img
           src={product.image}
           alt={product.name}
-          className={`w-full h-full object-cover transition-transform ${
+          className={`relative z-10 w-full h-full object-cover transition-transform ${
             theme === 'dark' ? 'group-hover:scale-105 duration-500' : 'group-hover:scale-110 duration-700'
           }`}
           whileHover={theme === 'dark' ? {} : { scale: 1.1 }}

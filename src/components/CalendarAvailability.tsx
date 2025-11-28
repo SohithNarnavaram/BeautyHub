@@ -1,4 +1,3 @@
-import { useState } from 'react';
 import { useTheme } from '../context/ThemeContext';
 import { Availability } from '../types';
 import { format, addDays, isSameDay, parseISO } from 'date-fns';
